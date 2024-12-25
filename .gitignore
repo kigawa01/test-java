@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/SeiyaBusPack1.3.1/
+/SchematicBrush-0.5.2/
+/*.scs
+/*.jar
+/*.zip

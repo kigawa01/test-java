@@ -2,7 +2,10 @@ package io.github.oneservermc.recrutiment.hal
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.math.BigInteger
 import java.util.concurrent.Executors
 
@@ -64,13 +67,13 @@ object Main {
 //    }
 //  }
 
-  @JvmStatic
-  fun main(args: Array<String>) {
-    nums.forEach {
-      val a = srcI / it
-      println(bytestoStr(a.toByteArray()))
-    }
-  }
+//  @JvmStatic
+//  fun main(args: Array<String>) {
+//    nums.forEach {
+//      val a = srcI / it
+//      println(bytestoStr(a.toByteArray()))
+//    }
+//  }
 
 //  @JvmStatic
 //  fun main(args: Array<String>) {
@@ -187,34 +190,34 @@ object Main {
 //      println("result: ${a[0]} $i ${bytestoStr(i.toByteArray())}-----------------------------")
 //    }
 //  }
-//  @JvmStatic
-//  fun main(args: Array<String>) {
-//    val bytes = ByteArray(3)
-//    bytes[2] = 'A'.code.toByte()
-//    bytes[1] = 'B'.code.toByte()
-//    bytes[0] = 'C'.code.toByte()
-//    println('A'.code)
-//    val res = mutableListOf<Byte>()
-//    println(BigInteger(bytes))
+  @JvmStatic
+  fun main(args: Array<String>) {
+    val bytes = ByteArray(3)
+    bytes[2] = 'A'.code.toByte()
+    bytes[1] = 'B'.code.toByte()
+    bytes[0] = 'C'.code.toByte()
+    println('A'.code)
+    val res = mutableListOf<Byte>()
+    println(BigInteger(bytes))
 //    printBytes(BigInteger(bytes).toByteArray())
-//    val src = "1016038658490104961427424829192107777586657527054493152248037795359031107804956764751901815526799202142850229155862345366185195252956012941764965047026450856177019505967863789072653967766593112749"
-//
-//    val srcI = BigInteger(src)
+    val src = "1016038658490104961427424829192107777586657527054493152248037795359031107804956764751901815526799202142850229155862345366185195252956012941764965047026450856177019505967863789072653967766593112749"
+
+    val srcI = BigInteger(src)
 //    printBytes(srcI.toByteArray())
-//    println(srcI)
-//    var i = srcI.divide(2.toBigInteger())
-//    while (true) {
-//      run(i, srcI)
-//      i--
-//      if (i < BigInteger.ZERO) break
-//    }
-//    println("end")
-//    while (scope.isActive) {
-//      runBlocking {
-//        delay(10000)
-//      }
-//    }
-//  }
+    println(srcI)
+    var i = srcI.divide(2.toBigInteger())
+    while (true) {
+      run(i, srcI)
+      i--
+      if (i < BigInteger.ZERO) break
+    }
+    println("end")
+    while (scope.isActive) {
+      runBlocking {
+        delay(10000)
+      }
+    }
+  }
 
   fun run(i: BigInteger, srcI: BigInteger) {
     scope.launch {
