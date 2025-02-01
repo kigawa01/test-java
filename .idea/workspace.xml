@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="Avoid overly verbose descriptions or unnecessary details.&#10;A short sentence in imperative form, no more than 50 characters long." />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2f83d24-8c07-4b8e-ad1a-f19503b662d6" name="変更" comment="aaa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/arc/config/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/arc/config/QuestLoaderImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/arc/quest/Quest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/arc/quest/QuestConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/arc/quest/QuestLoader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/m3/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/m3/Main1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/m3/Main2.kt" afterDir="false" />
+    <list default="true" id="f2f83d24-8c07-4b8e-ad1a-f19503b662d6" name="変更" comment="Add new quest and main logic implementations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/lazy/Lazy.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/hal/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/oneservermc/recrutiment/hal/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +80,7 @@
     "Kotlin.BKt.executor": "Run",
     "Kotlin.For.executor": "Run",
     "Kotlin.HashCodeTest.executor": "Run",
+    "Kotlin.LazyKt.executor": "Run",
     "Kotlin.Main (1).executor": "Run",
     "Kotlin.Main.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
@@ -130,7 +137,7 @@
       <recent name="io.github.oneservermc.recrutiment.arc.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Main (1)">
+  <component name="RunManager" selected="Kotlin.LazyKt">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -169,6 +176,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LazyKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LazyKt" />
+      <module name="test-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.github.oneservermc.recrutiment.m3.Main" />
       <module name="test-java" />
@@ -180,6 +194,13 @@
       <option name="MAIN_CLASS_NAME" value="io.github.oneservermc.recrutiment.hal.Main" />
       <module name="test-java" />
       <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="test-java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,16 +222,9 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Kotlin.LazyKt" />
+      <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.Main (1)" />
       <item itemvalue="Kotlin.Main" />
       <item itemvalue="Kotlin.BKt" />
@@ -218,11 +232,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.LazyKt" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.Main (1)" />
         <item itemvalue="Kotlin.Main" />
         <item itemvalue="Kotlin.Main" />
-        <item itemvalue="Kotlin.Main" />
-        <item itemvalue="Kotlin.BKt" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +301,8 @@
       <workItem from="1728489892466" duration="2615000" />
       <workItem from="1734074628680" duration="293000" />
       <workItem from="1734401920843" duration="737000" />
-      <workItem from="1735097488110" duration="3020000" />
+      <workItem from="1735097488110" duration="3275000" />
+      <workItem from="1736352128109" duration="2080000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656512940893</created>
@@ -311,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728489918131</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add new quest and main logic implementations">
+      <option name="closed" value="true" />
+      <created>1735100753340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735100753340</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +354,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="aaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
+    <MESSAGE value="Add new quest and main logic implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new quest and main logic implementations" />
   </component>
 </project>
